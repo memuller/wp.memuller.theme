@@ -14,8 +14,8 @@
  */
 
 get_header(); ?>
-
 <div id="page" role="main">
+	<?php get_sidebar(); ?>
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 
@@ -38,7 +38,7 @@ get_header(); ?>
 		<?php } ?>
 
 	</article>
-	<?php get_sidebar(); ?>
+	
 
 </div>
 
