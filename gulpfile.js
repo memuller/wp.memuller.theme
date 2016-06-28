@@ -10,10 +10,18 @@ var sequence    = require('run-sequence');
 var colors      = require('colors');
 var dateFormat  = require('dateformat');
 var del         = require('del');
+var fs          = require('fs');
 
 // Enter URL of your local server here
 // Example: 'http://localwebsite.dev'
 var URL = '';
+fs.stat('.locals.json', function(err, stat){
+  if(err == null){
+    var locals = require('./.locals.json')
+    URL = locals.URL
+  }
+})
+
 
 // Check for --production flag
 var isProduction = !!(argv.production);
