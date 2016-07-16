@@ -25,7 +25,23 @@
 }
 
 /* Tablet and desktop menu */
+header#masthead {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .top-bar {
+  @include flex-align($x: right);
+  
+  .home {
+    a {
+      font-family: $header-font-family;
+      color: $black;
+      font-size: sizeOf(medium, h1);
+    }
+
+  }
 
   .menu .home a {
     font-size: 1rem;
