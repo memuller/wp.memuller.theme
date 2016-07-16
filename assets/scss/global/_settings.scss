@@ -51,8 +51,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
+  primary: rgb(102,102,102),
+  secondary: rgb(204,204,204),
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
@@ -107,7 +107,7 @@ $block-grid-max: 8;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$font-family-monospace: $header-font-family;
 $header-sizes: (
   small: (
     'h1': 24,
@@ -560,8 +560,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: #121212;
 $topbar-submenu-background: $topbar-background;
-$topbar-link-color: #fff;
+$topbar-link-color: #aaa;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
