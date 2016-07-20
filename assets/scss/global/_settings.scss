@@ -58,7 +58,7 @@ $foundation-palette: (
   alert: #ec5840,
 );
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$medium-gray: rgb(102, 102, 119);
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
@@ -103,8 +103,7 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-
-$header-font-family: $body-font-family;
+$header-font-family: 'Ubuntu Mono', 'Liberation Mono', Courier, monospace;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: $header-font-family;
@@ -118,11 +117,11 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
+    'h1': 36,
+    'h2': 32,
+    'h3': 28,
+    'h4': 22,
+    'h5': 18,
     'h6': 16,
   ),
 );
@@ -560,6 +559,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
+$topbar-background: #fff;
 $topbar-submenu-background: $topbar-background;
 $topbar-link-color: #aaa;
 $topbar-input-width: 200px;
