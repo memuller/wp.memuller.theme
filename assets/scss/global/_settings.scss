@@ -103,6 +103,19 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
+@function sizeOf($size, $level){
+  @each $s, $h in $header-sizes {
+    @if($s == $size){
+      @each $lvl, $fnt-size in $h {
+        @if($lvl == $level){
+          @return rem-calc($fnt-size);
+        }
+      }
+    }
+  }
+}
+
+
 $header-font-family: 'Ubuntu Mono', 'Liberation Mono', Courier, monospace;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
