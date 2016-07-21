@@ -49,3 +49,22 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+add_filter('tiny_mce_before_init', function($arr){
+	$formats = [
+		[
+			'title' => '.side',
+			'block' => 'div',
+			'classes' => 'side',
+			'wrapper' => true
+		]
+	];
+
+	$arr['style_formats'] = json_encode($formats);
+	return $arr;
+});  
+
+add_filter('mce_buttons_2', function($buttons){
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+});
