@@ -12,4 +12,17 @@
     }
   }
 
+  .signature, .tags {
+    color: $medium-gray;
+    text-align: right;
+  }
+  .signature {
+    .name { 
+      text-transform: uppercase; 
+    }
+    time { font-style: italic; }
+  }
+  .tags {
+    font-style: italic;
+  }
 }
