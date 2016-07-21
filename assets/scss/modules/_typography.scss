@@ -9,3 +9,14 @@ h1, h2 {
 
 h2 {  }
 
+ul {
+	list-style: none;
+
+	li {
+		&:before {
+			font-family: $header-font-family;
+			content: '>';
+			padding-right: .5rem;
+		}
+	}
+}
