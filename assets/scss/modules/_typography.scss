@@ -20,3 +20,9 @@ ul {
 		}
 	}
 }
+
+p {
+	a {
+		border-bottom: 1px dashed $medium-gray;
+	}	
+}
