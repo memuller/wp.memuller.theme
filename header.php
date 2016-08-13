@@ -28,28 +28,32 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="title-bar" data-responsive-toggle="site-navigation">
+<!-- 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' );?></a>
 			</div>
-		</div>
+		</div> -->
 
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="home">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php bloginfo( 'name' ); echo("();"); ?>
-				</a>
-			</div>
-			<?php if (false) { ?>
-				<div class="top-bar-right">
-					<?php foundationpress_top_bar_r(); ?>
-
-					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-						<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-					<?php endif; ?>
+		<nav id="site-navigation" class="row main-navigation top-bar" role="navigation">
+			<div class="wrap">
+				<div class="home">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); echo("();"); ?>
+					</a>
 				</div>
-			<?php } ?>		
+				<ul class="single-nav">
+					<li>
+						<a class="back" href="">home</a>
+					</li>
+					<li>
+						<a class="about">about</a>
+					</li>
+				</ul>
+				<div class="mobile">
+					
+				</div>
+			</div>		
 		</nav>
 	</header>
 

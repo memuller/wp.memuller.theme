@@ -32,10 +32,41 @@ header#masthead {
 }
 
 .top-bar {
-  @include flex-align($x: right);
+  //@include flex-align($x: right);
+  @include grid-row();
+
+  .left {
+    position: absolute;
+    left: 0px; top: 0px;
+    font-family: $header-font-family;
+    
+    a.back {
+      font-size: sizeOf(medium, h1);
+      border: 1px $light-gray solid;
+      padding: .5rem 1rem; 
+    }
+  }
+  
+  .wrap {
+    @include grid-row();
+    width: 100%;
+    text-align: right;
+  }
+  
+  .single-nav {
+    @include grid-column(12);
+    padding-right: 2.8rem !important;
+      li {
+        &:before { display: none; }
+        display: inline-block;
+        margin-left: .5rem;
+      }
+  }
   
   .home {
+    @include grid-column(12);
     a {
+      float: none;
       font-family: $header-font-family;
       color: $black;
       font-size: sizeOf(medium, h1);

@@ -13,6 +13,14 @@
 		</section>
 		<div id="footer-container">
 			<footer id="footer">
+			<?php if(is_singular('post')){ ?>
+			<nav class='page-navigation col'>
+					<?php previous_post_link('%link', '%title') ?>
+					<?php next_post_link('%link', '%title') ?>
+			</nav>
+			<?php } else { ?>
+
+			<?php } ?>
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 				<?php do_action( 'foundationpress_after_footer' ); ?>

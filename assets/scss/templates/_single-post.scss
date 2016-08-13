@@ -12,14 +12,6 @@
     }
   }
 
-  .side {
-    position: absolute;
-    width: 23%;
-    left: 0px;
-    text-align: right;
-    color: $medium-gray;
-  }
-
   .signature, .tags {
     color: $medium-gray;
     text-align: right;
@@ -32,5 +24,34 @@
   }
   .tags {
     font-style: italic;
+  }
+}
+
+#footer-container {
+  #footer {
+    max-width: 100%;  
+  }
+  
+}
+
+#footer {
+  .page-navigation {
+    max-width: 100% !important;
+    @include grid-row();
+    a {
+      @include grid-column(6);
+      
+      &:nth-child(2){
+        text-align: center;
+      }
+
+      &:first-child {
+
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
   }
 }
