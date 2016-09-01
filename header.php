@@ -42,14 +42,10 @@
 						<?php bloginfo( 'name' ); echo("();"); ?>
 					</a>
 				</div>
-				<ul class="single-nav">
-					<li>
-						<a class="back" href="">home</a>
-					</li>
-					<li>
-						<a class="about">about</a>
-					</li>
-				</ul>
+				<?php wp_nav_menu([
+					'menu' => 'header',
+					'menu_class' => 'single-nav'
+				]) ?>
 				<div class="mobile">
 					
 				</div>
