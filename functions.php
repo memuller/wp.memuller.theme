@@ -62,9 +62,21 @@ add_filter('tiny_mce_before_init', function($arr){
 
 	$arr['style_formats'] = json_encode($formats);
 	return $arr;
-});  
+});
 
 add_filter('mce_buttons_2', function($buttons){
 	array_unshift($buttons, 'styleselect');
 	return $buttons;
 });
+
+function remove_core_updates(){
+	global $wp_version;
+	return (object) [
+		'last_checked'=> time(),
+		'version_checked'=> $wp_version
+	];
+}
+
+foreach ['pre_site_transient_update_core', 'pre_site_transient_update_plugins', 'pre_site_transient_update_themes'] as $hook) {
+	add_filter($hook, 'remove_core_updates');
+}
