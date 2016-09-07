@@ -77,6 +77,6 @@ function remove_core_updates(){
 	];
 }
 
-foreach ['pre_site_transient_update_core', 'pre_site_transient_update_plugins', 'pre_site_transient_update_themes'] as $hook) {
+foreach (['pre_site_transient_update_core', 'pre_site_transient_update_plugins', 'pre_site_transient_update_themes'] as $hook) {
 	add_filter($hook, 'remove_core_updates');
 }
