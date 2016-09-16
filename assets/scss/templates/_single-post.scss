@@ -42,15 +42,10 @@
     a {
       @include grid-column(6);
 
-      &:nth-child(2){
-        text-align: center;
+      &[rel=prev]{
+        text-align: left;
       }
-
-      &:first-child {
-
-      }
-
-      &:last-child {
+      &[rel=next] {
         text-align: right;
       }
     }
