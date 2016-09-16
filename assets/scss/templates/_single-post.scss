@@ -17,8 +17,9 @@
     text-align: right;
   }
   .signature {
-    .name { 
-      text-transform: uppercase; 
+    padding-top: 2rem;
+    .name {
+      text-transform: uppercase;
     }
     time { font-style: italic; }
   }
@@ -29,9 +30,9 @@
 
 #footer-container {
   #footer {
-    max-width: 100%;  
+    max-width: 100%;
   }
-  
+
 }
 
 #footer {
@@ -40,7 +41,7 @@
     @include grid-row();
     a {
       @include grid-column(6);
-      
+
       &:nth-child(2){
         text-align: center;
       }
