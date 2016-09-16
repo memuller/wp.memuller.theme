@@ -1,5 +1,8 @@
 h1, h2 {
 	a { color: $black; }
+}
+
+h1 {
 	&:before {
 		content: '> ';
 		@include breakpoint(medium) {
@@ -22,6 +25,7 @@ h2 {  }
 	@include block();
 	font-style: italic;
 	@include breakpoint(medium) {
+		font-size: .9rem;
 	  position: absolute;
 	  width: 23%;
 	  left: 0px;
@@ -29,6 +33,11 @@ h2 {  }
 	  padding: 0px;
 	  border: none;
 	  font-style: normal;
+		figure {
+			text-align: right;
+			display: inline-block;
+			margin: 0 0;
+		}
 	}
 	p {
 	  margin-bottom: 0px;
@@ -40,14 +49,14 @@ h2 {  }
 	div.side {
 		width: 100%; text-align: left;
 		position: inherit;
-		font-style: italic; 
+		font-style: italic;
 		@include block();
 	}
 }
 
 
-pre { 
-	@include block(); 
+pre {
+	@include block();
 	white-space: pre-wrap;
 	font-family: $header-font-family;
 }
@@ -67,5 +76,5 @@ ul {
 p {
 	a {
 		border-bottom: 1px dashed $medium-gray;
-	}	
+	}
 }
