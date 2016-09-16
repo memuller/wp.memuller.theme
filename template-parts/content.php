@@ -12,7 +12,7 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 	<header>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	</header>
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
