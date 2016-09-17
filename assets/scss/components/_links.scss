@@ -6,3 +6,10 @@
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
 }
+
+.menu li.active {
+  a {
+    color: #000;
+    background: inherit;
+  }
+}
