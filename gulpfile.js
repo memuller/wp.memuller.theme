@@ -276,3 +276,20 @@ gulp.task('default', ['build', 'browser-sync'], function() {
       logFileChange(event);
     });
 });
+
+// Install task
+// Builds, then moves a copy to the 'production' local env.
+gulp.task('install', ['build'], function(){
+  var os =  require('os'),
+      fse = require('fs-extra')
+
+  var path = os.homedir()+'/Repos/memuller/wp-content/themes/'
+  var pkg = JSON.parse(fs.readFileSync('./package.json'))
+  var name = pkg.name.split('_')[0]
+
+  fse.removeSync(path+name)
+
+  return gulp.src(PATHS.pkg)
+    .pipe($.copy(name))
+    .pipe(gulp.dest(path))
+})
