@@ -290,6 +290,5 @@ gulp.task('install', ['build'], function(){
   fse.removeSync(path+name)
 
   return gulp.src(PATHS.pkg)
-    .pipe($.copy(name))
-    .pipe(gulp.dest(path))
+    .pipe($.copy(path+name))
 })
