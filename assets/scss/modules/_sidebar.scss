@@ -5,19 +5,18 @@
 
   article {
   	margin-bottom: 2rem;
-  
+
   	h6 {
   		font-family: $body-font-family;
   		font-size: sizeOf('medium', 'h4');
   		text-align: right;
-  		padding-right: 16px;
   	}
   }
 
   ul {
   	display: block;
   	width: 100%;
-  	
+
   	li {
   		display: block;
   		text-align: right;
@@ -27,6 +26,7 @@
   		a {
   			color: $medium-gray;
   			display: inline;
+        padding: .7rem 0rem;
   		}
   	}
   }
