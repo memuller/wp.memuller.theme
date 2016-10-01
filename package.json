@@ -1,25 +1,28 @@
 {
-  "name": "foundationpress",
-  "title": "FoundationPress",
-  "version": "2.6.2",
-  "description": "FoundationPress is a WordPress starter theme based on Foundation 6 by Zurb",
+  "name": "memuller_theme",
+  "title": "memuller's theme",
+  "version": "16.10.1",
+  "description": "Wordpress theme for memuller.com, based on FoundationPress and Foundation 6.",
+  "author": {
+    "name": "Matheus E. Muller",
+    "email": "hello@memuller.com",
+    "url": "http://memuller.com"
+  },
   "keywords": [
     "FoundationPress",
     "WordPress",
-    "starter theme",
     "Foundation",
     "semantic",
     "mobile first",
     "customizable",
     "responsive"
   ],
-  "homepage": "http://foundationpress.olefredrik.com/",
-  "bugs": "https://github.com/olefredrik/FoundationPress/issues",
+  "homepage": "https://gitlab.com/memuller.web/wp_theme",
   "license": "MIT",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/olefredrik/FoundationPress.git"
+    "url": "https://gitlab.com/memuller.web/wp_theme.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
@@ -75,6 +78,7 @@
     "phpcbf": "gulp phpcbf",
     "postinstall": "bower install && gulp build",
     "production": "gulp --production",
-    "watch": "gulp"
+    "watch": "gulp",
+    "install": "gulp install"
   }
 }
