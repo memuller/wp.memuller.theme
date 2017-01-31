@@ -39,7 +39,7 @@
 			<div class="wrap">
 				<div class="home">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); echo("();"); ?>
+						<?php bloginfo( 'name' ); ?>
 					</a>
 				</div>
 				<?php wp_nav_menu([
@@ -47,9 +47,9 @@
 					'menu_class' => 'single-nav'
 				]) ?>
 				<div class="mobile">
-					
+
 				</div>
-			</div>		
+			</div>
 		</nav>
 	</header>
 
