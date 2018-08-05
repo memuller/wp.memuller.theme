@@ -21,23 +21,51 @@ h2 {  }
 	margin-bottom: 1rem;
 }
 
+@mixin side(){
+  font-style: italic;
+  font-size: .9rem;
+  position: absolute;
+  padding: 0px;
+  padding-left: 5px;
+  border: none;
+  font-style: normal;
+  &.wp-block-memuller-table-of-contents {
+    ul, li {
+      text-align: left !important;
+      font-style: normal;
+      margin-left: 0px;
+    }
+    li:before {
+      content: '.';
+      padding-right: 0px;
+    }
+    $side_li_spacer: .5rem;
+    li.lvl-3 { margin-left: $side_li_spacer; }
+    li.lvl-4 { margin-left: $side_li_spacer * 2; }
+    li.lvl-5 { margin-left: $side_li_spacer * 3; }
+    li.lvl-6 { margin-left: $side_li_spacer * 4; }
+  }
+
+  h2 {
+    font-family: $body-font-family;
+    font-size: sizeOf('medium', 'h4');
+    text-align: left;
+    color: black;
+  }
+}
+
 .side {
-	@include block();
-	font-style: italic;
-	@include breakpoint(medium) {
-		font-size: .9rem;
-	  position: absolute;
+  @include block();
+	@include breakpoint(large) {
+    @include side();
 	  width: 23%;
 	  left: 0px;
 	  text-align: right;
-	  padding: 0px;
-	  border: none;
-	  font-style: normal;
 		figure {
 			text-align: right;
 			display: inline-block;
 			margin: 0 0;
-		}
+    }
 	}
 	p {
 	  margin-bottom: 0px;

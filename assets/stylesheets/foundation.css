@@ -7115,18 +7115,39 @@ h1:before {
   padding: .5rem;
   color: #666677;
   border-left: 0.5rem #e6e6e6 solid;
-  margin-bottom: 1rem;
-  font-style: italic; }
-  @media screen and (min-width: 40em) {
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 64em) {
     .side {
+      font-style: italic;
       font-size: .9rem;
       position: absolute;
+      padding: 0px;
+      padding-left: 5px;
+      border: none;
+      font-style: normal;
       width: 23%;
       left: 0px;
-      text-align: right;
-      padding: 0px;
-      border: none;
-      font-style: normal; }
+      text-align: right; }
+      .side.wp-block-memuller-table-of-contents ul, .side.wp-block-memuller-table-of-contents li {
+        text-align: left !important;
+        font-style: normal;
+        margin-left: 0px; }
+      .side.wp-block-memuller-table-of-contents li:before {
+        content: '.';
+        padding-right: 0px; }
+      .side.wp-block-memuller-table-of-contents li.lvl-3 {
+        margin-left: 0.5rem; }
+      .side.wp-block-memuller-table-of-contents li.lvl-4 {
+        margin-left: 1rem; }
+      .side.wp-block-memuller-table-of-contents li.lvl-5 {
+        margin-left: 1.5rem; }
+      .side.wp-block-memuller-table-of-contents li.lvl-6 {
+        margin-left: 2rem; }
+      .side h2 {
+        font-family: "Ubuntu", Helvetica, Roboto, Arial, sans-serif;
+        font-size: 1.375rem;
+        text-align: left;
+        color: black; }
       .side figure {
         text-align: right;
         display: inline-block;
