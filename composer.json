@@ -1,14 +1,18 @@
 {
-    "name": "olefredrik/foundationpress",
-    "description": "FoundationPress is a WordPress starter theme based on Foundation 6 by Zurb",
+    "name": "memuller/wp.memuller.theme",
+    "description": "Theme for memuller.com, based on FoundationPress",
     "type": "wordpress-theme",
     "minimum-stability" : "dev",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Ole Fredrik Lie",
-            "email": "mail@olefredrik.com"
-        }
+		{
+			"name": "Matheus E. Muller",
+			"email": "hello@memuller.com"
+		},
+		{
+        	"name": "Ole Fredrik Lie",
+        	"email": "mail@olefredrik.com"
+		}
     ],
     "require": {
         "composer/installers": "~1.0"
